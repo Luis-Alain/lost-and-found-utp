@@ -6,6 +6,6 @@ export default defineConfig({
   schema: "./src/schema.ts",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.DIRECT_URL!, // ← migraciones van por conexión directa
+    url: process.env.DATABASE_URL_SESSION!, // las migraciones van por conexión directa, no por pool (supabase)
   },
 });
